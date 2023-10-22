@@ -16,6 +16,11 @@ Clear();
 string[] arrayFirst = inputText("Введите строковый массив через пробел:");
 string[] arraySecond = new string [arrayFirst.Length];
 
+// Code
+
+arrayLineWriter(arrayFirst, arraySecond);
+PrintArray(arraySecond);
+
 // Methods
 
 int inputText(string message);
