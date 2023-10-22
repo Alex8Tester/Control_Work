@@ -11,3 +11,41 @@ using System.Linq;
 using static System.Console;
 Clear();
 
+// Values
+
+string[] arrayFirst = inputText("Введите строковый массив через пробел:");
+string[] arraySecond = new string [arrayFirst.Length];
+
+// Methods
+
+int inputText(string message);
+{
+    WriteLine(message);
+    string readMessage = ReadLine();
+    int result = int.Parse(readMessage);
+    return result; 
+}
+
+void arrayLineWriter(string[] arrayFirst, string[] arraySecond)
+{
+    int count = 0;
+    for (int i = 0; i < arrayFirst.Length; i++)
+    {
+        if (arrayFirst[i].Length <= 3)
+            {
+                arraySecond[count] = arrayFirst[i];
+                count++;
+            }
+    }
+}
+
+void PrintArray(string [] array)
+{
+    Write("[");
+    for (int i = 0; i < array.Length - 1; i++)
+    {
+       Write($"{array[i]}, "); 
+    }
+    Write($"{array[array.Length - 1]}");
+    WriteLine("]");
+}
